@@ -6,10 +6,10 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer.jsx';
 import { FiZoomIn, FiX, FiChevronLeft, FiChevronRight, FiExternalLink, FiCalendar, FiMapPin } from 'react-icons/fi';
 
-import img1 from '../assets/gallery/1.jpg';
-import img2 from '../assets/gallery/2.jpg';
-import img3 from '../assets/gallery/3.png';
-import img4 from '../assets/gallery/4.jpg';
+import img1 from '../assets/Gallery/1.jpg';
+import img2 from '../assets/Gallery/2.jpg';
+import img3 from '../assets/Gallery/3.png';
+import img4 from '../assets/Gallery/4.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
