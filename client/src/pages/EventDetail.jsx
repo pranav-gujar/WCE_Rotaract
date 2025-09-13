@@ -5,16 +5,92 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { FiArrowLeft, FiCalendar, FiMapPin, FiClock, FiUsers, FiLink } from 'react-icons/fi';
 
+// Main Banner/Images
+import PDM_Poster from '../assets/Events_IMG/PDM/poster.jpg';
+import GBM_Poster from '../assets/Events_IMG/GBM/poster.jpg';
+import GM_Poster from '../assets/Events_IMG/GM/poster.jpeg';
+import GIM_Poster from '../assets/Events_IMG/GIM/poster.jpeg';
+import SP_Poster from '../assets/Events_IMG/SP/poster.jpg';
+import CSR_Poster from '../assets/Events_IMG/CSR/poster.jpg';
+import BDC_March_2025_Poster from '../assets/Events_IMG/BDC/March 2025/poster.webp';
+import BDC_October_2024_Poster from '../assets/Events_IMG/BDC/October 2024/poster.jpeg';
+
+// General GM Images
+import GM_one from '../assets/Events_IMG/GM/1.jpg';
+import GM_two from '../assets/Events_IMG/GM/2.jpg';
+import GM_three from '../assets/Events_IMG/GM/3.jpg';
+
+// General GBM Images
+import GBM_one from '../assets/Events_IMG/GBM/1.jpg';
+import GBM_two from '../assets/Events_IMG/GBM/2.jpg';
+import GBM_three from '../assets/Events_IMG/GBM/3.jpg';
+
+// General GIM Images
+import GIM_one from '../assets/Events_IMG/GIM/1.jpg';
+import GIM_two from '../assets/Events_IMG/GIM/2.jpg';
+import GIM_three from '../assets/Events_IMG/GIM/3.jpg';
+import GIM_four from '../assets/Events_IMG/GIM/4.jpg';
+import GIM_five from '../assets/Events_IMG/GIM/5.jpg';
+import GIM_six from '../assets/Events_IMG/GIM/6.jpg';
+
+// General CSR Images
+import CSR_one from '../assets/Events_IMG/CSR/1.jpg';
+import CSR_two from '../assets/Events_IMG/CSR/2.jpg';
+import CSR_three from '../assets/Events_IMG/CSR/3.jpg';
+import CSR_four from '../assets/Events_IMG/CSR/4.jpg';
+import CSR_five from '../assets/Events_IMG/CSR/5.jpg';
+
+// Blood Donation Camp October 2024
+import BDC_Oct2024_one from '../assets/Events_IMG/BDC/October 2024/1.jpg';
+import BDC_Oct2024_two from '../assets/Events_IMG/BDC/October 2024/2.jpg';
+import BDC_Oct2024_three from '../assets/Events_IMG/BDC/October 2024/3.jpg';
+import BDC_Oct2024_four from '../assets/Events_IMG/BDC/October 2024/4.jpg';
+import BDC_Oct2024_five from '../assets/Events_IMG/BDC/October 2024/5.jpg';
+import BDC_Oct2024_six from '../assets/Events_IMG/BDC/October 2024/6.jpg';
+import BDC_Oct2024_seven from '../assets/Events_IMG/BDC/October 2024/7.jpg';
+import BDC_Oct2024_eight from '../assets/Events_IMG/BDC/October 2024/8.jpg';
+import BDC_Oct2024_nine from '../assets/Events_IMG/BDC/October 2024/9.jpg';
+import BDC_Oct2024_ten from '../assets/Events_IMG/BDC/October 2024/10.jpg';
+import BDC_Oct2024_eleven from '../assets/Events_IMG/BDC/October 2024/11.jpg';
+import BDC_Oct2024_twelve from '../assets/Events_IMG/BDC/October 2024/12.jpg';
+
+// Blood Donation Camp March 2025
+import BDC_Mar2025_one from '../assets/Events_IMG/BDC/March 2025/1.jpg';
+import BDC_Mar2025_two from '../assets/Events_IMG/BDC/March 2025/2.jpg';
+import BDC_Mar2025_three from '../assets/Events_IMG/BDC/March 2025/3.jpg';
+import BDC_Mar2025_four from '../assets/Events_IMG/BDC/March 2025/4.jpg';
+import BDC_Mar2025_five from '../assets/Events_IMG/BDC/March 2025/5.jpg';
+import BDC_Mar2025_six from '../assets/Events_IMG/BDC/March 2025/6.jpg';
+import BDC_Mar2025_seven from '../assets/Events_IMG/BDC/March 2025/7.jpg';
+import BDC_Mar2025_eight from '../assets/Events_IMG/BDC/March 2025/8.jpg';
+
+// General PDM Images
+import PDM_one from '../assets/Events_IMG/PDM/1.jpg';
+import PDM_two from '../assets/Events_IMG/PDM/2.jpg';
+import PDM_three from '../assets/Events_IMG/PDM/3.jpg';
+import PDM_four from '../assets/Events_IMG/PDM/4.jpg';
+import PDM_five from '../assets/Events_IMG/PDM/5.jpg';
+import PDM_six from '../assets/Events_IMG/PDM/6.jpg';
+
+
+// General SP Images
+import SP_one from '../assets/Events_IMG/SP/1.jpg';
+import SP_two from '../assets/Events_IMG/SP/2.jpg';
+import SP_three from '../assets/Events_IMG/SP/3.jpg';
+
+
 // Mock data - in a real app, you would fetch this from an API
 const mockEvents = {
   1: {
     id: 1,
     title: 'Professional Development Meets (PDMs)',
-    date: '2023-11-15',
+    date: '2025-04-15',
     time: '09:00 AM - 05:00 PM',
-    location: 'Tilak Hall',
-    image: 'https://img.freepik.com/free-vector/people-analyzing-growth-charts_23-2148866842.jpg',
-    banner: 'https://img.freepik.com/free-vector/technology-banner-with-holographic-effect_52683-47236.jpg',
+    location: 'WCE Sangli',
+    image: PDM_Poster,
+    banner: PDM_Poster,
+    // image: 'https://img.freepik.com/free-vector/people-analyzing-growth-charts_23-2148866842.jpg',
+    // banner: 'https://img.freepik.com/free-vector/technology-banner-with-holographic-effect_52683-47236.jpg',
     category: 'Conference',
     description: 'Sessions conducted to enhance members’ skills through workshops, expert talks, and interactive learning.',
     longDescription: 'Professional Development Meets (PDMs) are designed to build confidence, sharpen essential professional skills, and prepare members for future career opportunities. These sessions include hands-on workshops, expert-led talks, and interactive learning activities that focus on both technical and soft skills. The initiative ensures that members gain practical knowledge while building a strong professional network.\n\nWhether it\'s resume building, interview preparation, leadership skills, or exposure to cutting-edge technologies, PDMs aim to holistically develop members for academic and career success.',
@@ -27,23 +103,26 @@ const mockEvents = {
       'Networking opportunities with peers and mentors'
     ],
     gallery: [
-      'https://img.freepik.com/free-vector/people-analyzing-growth-charts_23-2148866842.jpg',
-      'https://img.freepik.com/free-vector/college-students-concept-illustration_114360-1244.jpg',
-      'https://img.freepik.com/free-vector/organic-flat-people-business-training-illustration_23-2148914456.jpg'
+      PDM_one, PDM_two, PDM_three,
+      // 'https://img.freepik.com/free-vector/people-analyzing-growth-charts_23-2148866842.jpg',
+      // 'https://img.freepik.com/free-vector/college-students-concept-illustration_114360-1244.jpg',
+      // 'https://img.freepik.com/free-vector/organic-flat-people-business-training-illustration_23-2148914456.jpg'
     ],
     registrationLink: '#',
     speakers: [
-      { name: 'Mr. Pranav Gujar', role: 'CEO PGT Global Network' }
+      // { name: 'Mr. Pranav Gujar', role: 'CEO PGT Global Network' }
     ]
   },
   2: {
     id: 2,
     title: 'Street Play',
-    date: '2023-12-05',
+    date: '2025-03-29',
     time: '03:00 PM - 05:00 PM',
     location: 'Campus Courtyard',
-    image: 'https://img.freepik.com/free-vector/organic-flat-people-business-training-illustration_23-2148914456.jpg',
-    banner: 'https://img.freepik.com/free-vector/gradient-hackathon-banner_23-2149112554.jpg',
+    image: SP_Poster,
+    banner: SP_Poster,
+    // image: 'https://img.freepik.com/free-vector/organic-flat-people-business-training-illustration_23-2148914456.jpg',
+    // banner: 'https://img.freepik.com/free-vector/gradient-hackathon-banner_23-2149112554.jpg',
     category: 'Social',
     description: 'A creative event where participants use drama and performance to spread social awareness on pressing issues in an engaging and impactful way.',
     longDescription: 'Street Play is one of the most dynamic and impactful cultural initiatives of our club. Performed in open public spaces, these plays address socially relevant topics such as gender equality, environmental conservation, mental health, and civic responsibility. With powerful dialogues, expressive performances, and audience interaction, the plays aim to spark conversations and drive change.\n\nThis platform not only gives participants an opportunity to showcase their acting and storytelling skills but also instills a sense of responsibility to use art as a medium for awareness. It is entertainment with a purpose — engaging audiences while delivering meaningful messages.',
@@ -56,23 +135,26 @@ const mockEvents = {
       'Encourages social responsibility among participants'
     ],
     gallery: [
-      'https://img.freepik.com/free-vector/organic-flat-people-business-training-illustration_23-2148914456.jpg',
-      'https://img.freepik.com/free-vector/hand-drawn-hackathon-illustration_23-2149247796.jpg',
-      'https://img.freepik.com/free-vector/hand-drawn-hackathon-background_23-2149247801.jpg'
+      SP_one, SP_two, SP_three,
+      // 'https://img.freepik.com/free-vector/organic-flat-people-business-training-illustration_23-2148914456.jpg',
+      // 'https://img.freepik.com/free-vector/hand-drawn-hackathon-illustration_23-2149247796.jpg',
+      // 'https://img.freepik.com/free-vector/hand-drawn-hackathon-background_23-2149247801.jpg'
     ],
     registrationLink: '#',
     speakers: [
-      { name: 'Mr. Pranav Gujar', role: 'CEO PGT Global Network' }
+      // { name: 'Mr. Pranav Gujar', role: 'CEO PGT Global Network' }
     ]
   },
   3: {
     id: 3,
     title: 'General Body Meets (GBMs)',
-    date: '2024-01-10',
+    date: '2024-01-21',
     time: '2:00 PM - 5:00 PM',
-    location: 'Main Seminar Hall',
-    image: 'https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg',
-    banner: 'https://img.freepik.com/free-vector/web-development-banner-with-abstract-design_1361-2600.jpg',
+    location: 'WCE Sangli',
+    image: GBM_Poster,
+    banner: GBM_Poster,
+    // image: 'https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg',
+    // banner: 'https://img.freepik.com/free-vector/web-development-banner-with-abstract-design_1361-2600.jpg',
     category: 'Workshop',
     description: 'Regular gatherings of all members to share updates, review activities, and plan upcoming projects.',
     longDescription: 'General Body Meets (GBMs) serve as the backbone of our club\'s operations. These regular sessions bring together all members to ensure everyone stays updated on current activities, upcoming events, and organizational goals. GBMs are also a platform for open discussions, feedback exchange, and collaborative planning of new initiatives.\n\nBy fostering transparency and inclusivity, GBMs help align members with the club’s mission, strengthen relationships among peers, and encourage active participation in decision-making. They also provide opportunities to recognize achievements and motivate members toward future goals.',
@@ -85,23 +167,26 @@ const mockEvents = {
       'Strengthening bonding and collaboration among members'
     ],
     gallery: [
-      'https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg',
-      'https://img.freepik.com/free-vector/web-development-isometric-concept-with-programmer-working_107791-9443.jpg',
-      'https://img.freepik.com/free-vector/web-development-programming-abstract-concept-illustration_335657-3822.jpg'
+      GBM_one, GBM_two, GBM_three,
+      // 'https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg',
+      // 'https://img.freepik.com/free-vector/web-development-isometric-concept-with-programmer-working_107791-9443.jpg',
+      // 'https://img.freepik.com/free-vector/web-development-programming-abstract-concept-illustration_335657-3822.jpg'
     ],
     registrationLink: '#',
     speakers: [
-      { name: 'Mr. Pranav Gujar', role: 'CEO PGT Global Network' }
+      // { name: 'Mr. Pranav Gujar', role: 'CEO PGT Global Network' }
     ]
   },
   4: {
     id: 4,
     title: 'Global Mandate',
-    date: '2024-02-20',
-    time: '6:00 PM - 9:00 PM',
-    location: 'Tilak Hall, Classrooms, Seminar Halls',
-    image: 'https://img.freepik.com/free-vector/college-students-concept-illustration_114360-1244.jpg',
-    banner: 'https://img.freepik.com/free-vector/college-students-concept-illustration_114360-1203.jpg',
+    date: '2023-10-07',
+    time: '9:00 AM - 6:00 PM',
+    location: 'WCE Sangli',
+    image: GM_Poster,
+    banner: GM_Poster,
+    // image: 'https://img.freepik.com/free-vector/college-students-concept-illustration_114360-1244.jpg',
+    // banner: 'https://img.freepik.com/free-vector/college-students-concept-illustration_114360-1203.jpg',
     category: 'Networking',
     description: 'A platform where participants discuss and simulate global issues, policies, and solutions through debate, presentations, and strategy-making.',
     longDescription: 'Global Mandate is a flagship event designed to engage participants in meaningful discussions and simulations of pressing international issues. Through structured debates, policy presentations, and collaborative strategy-making, participants gain a deeper understanding of global challenges and the complexities of decision-making at an international level.\n\nThe event not only nurtures awareness of international affairs but also sharpens analytical and problem-solving skills. By simulating real-world scenarios, Global Mandate builds confidence in diplomatic communication, negotiation, and teamwork. It provides a unique opportunity for youth to step into the shoes of global leaders and contribute ideas for a better world.',
@@ -114,23 +199,26 @@ const mockEvents = {
       'Brings diverse perspectives together for collaborative solutions'
     ],
     gallery: [
-      'https://img.freepik.com/free-vector/college-students-concept-illustration_114360-1244.jpg',
-      'https://img.freepik.com/free-vector/business-people-networking_23-2148894001.jpg',
-      'https://img.freepik.com/free-vector/meeting-business-people_23-2148894004.jpg'
+      GM_one, GM_two, GM_three,
+      // 'https://img.freepik.com/free-vector/college-students-concept-illustration_114360-1244.jpg',
+      // 'https://img.freepik.com/free-vector/business-people-networking_23-2148894001.jpg',
+      // 'https://img.freepik.com/free-vector/meeting-business-people_23-2148894004.jpg'
     ],
     registrationLink: '#',
     speakers: [
-      { name: 'Mr. Pranav Gujar', role: 'CEO PGT Global Network' }
+      // { name: 'Mr. Pranav Gujar', role: 'CEO PGT Global Network' }
     ]
   },
   5: {
     id: 5,
-    title: 'Blood Donation Camps',
-    date: '2025-02-20',
+    title: 'Blood Donation Camp 2024',
+    date: '2024-10-22',
     time: '03:00 PM - 05:00 PM',
-    location: 'Community Hall',
-    image: 'https://img.freepik.com/free-vector/organic-flat-people-business-training-illustration_23-2148914456.jpg',
-    banner: 'https://img.freepik.com/free-vector/gradient-hackathon-banner_23-2149112554.jpg',
+    location: 'WCE Sangli',
+    image: BDC_October_2024_Poster,
+    banner: BDC_October_2024_Poster,
+    // image: 'https://img.freepik.com/free-vector/organic-flat-people-business-training-illustration_23-2148914456.jpg',
+    // banner: 'https://img.freepik.com/free-vector/gradient-hackathon-banner_23-2149112554.jpg',
     category: 'Social',
     description: 'A flagship community service initiative where members organize donation drives to support hospitals and blood banks.',
     longDescription: ' Blood Donation Camps are one of the most impactful social initiatives organized by our club. These camps bring together volunteers and community members to donate blood, directly supporting hospitals, patients in need, and local blood banks. \n\nThe initiative not only helps save countless lives but also spreads awareness about the importance of regular blood donation. Through collaboration with medical professionals and healthcare organizations, the camps ensure a safe, organized, and meaningful experience for both donors and recipients. \n\nThis event reflects our commitment to social responsibility and community welfare — creating an environment of compassion, health awareness, and unity.',
@@ -143,13 +231,112 @@ const mockEvents = {
       'Strengthens partnerships with healthcare organizations'
     ],
     gallery: [
-      'https://img.freepik.com/free-vector/organic-flat-people-business-training-illustration_23-2148914456.jpg',
-      'https://img.freepik.com/free-vector/hand-drawn-hackathon-illustration_23-2149247796.jpg',
-      'https://img.freepik.com/free-vector/hand-drawn-hackathon-background_23-2149247801.jpg'
+       BDC_Oct2024_one, BDC_Oct2024_two, BDC_Oct2024_three, BDC_Oct2024_four,
+       BDC_Oct2024_five, BDC_Oct2024_six, BDC_Oct2024_seven, BDC_Oct2024_eight,
+       BDC_Oct2024_nine, BDC_Oct2024_ten, BDC_Oct2024_eleven, BDC_Oct2024_twelve,
+      // 'https://img.freepik.com/free-vector/organic-flat-people-business-training-illustration_23-2148914456.jpg',
+      // 'https://img.freepik.com/free-vector/hand-drawn-hackathon-illustration_23-2149247796.jpg',
+      // 'https://img.freepik.com/free-vector/hand-drawn-hackathon-background_23-2149247801.jpg'
     ],
     registrationLink: '#',
     speakers: [
-      { name: 'Mr. Pranav Gujar', role: 'CEO PGT Global Network' }
+      // { name: 'Mr. Pranav Gujar', role: 'CEO PGT Global Network' }
+    ]
+  },
+  6: {
+    id: 6,
+    title: 'Blood Donation Camp 2025',
+    date: '2025-04-04',
+    time: '03:00 PM - 05:00 PM',
+    location: 'WCE Sangli',
+    image: BDC_March_2025_Poster,
+    banner: BDC_March_2025_Poster,
+    // image: 'https://img.freepik.com/free-vector/organic-flat-people-business-training-illustration_23-2148914456.jpg',
+    // banner: 'https://img.freepik.com/free-vector/gradient-hackathon-banner_23-2149112554.jpg',
+    category: 'Social',
+    description: 'A flagship community service initiative where members organize donation drives to support hospitals and blood banks.',
+    longDescription: ' Blood Donation Camps are one of the most impactful social initiatives organized by our club. These camps bring together volunteers and community members to donate blood, directly supporting hospitals, patients in need, and local blood banks. \n\nThe initiative not only helps save countless lives but also spreads awareness about the importance of regular blood donation. Through collaboration with medical professionals and healthcare organizations, the camps ensure a safe, organized, and meaningful experience for both donors and recipients. \n\nThis event reflects our commitment to social responsibility and community welfare — creating an environment of compassion, health awareness, and unity.',
+    highlights: [
+      'Directly supports hospitals and patients in need',
+      'Encourages community participation in life-saving activities',
+      'Safe and organized donation process with medical supervision',
+      'Raises awareness about the importance of regular blood donation',
+      'Builds a culture of compassion and social responsibility',
+      'Strengthens partnerships with healthcare organizations'
+    ],
+    gallery: [
+      BDC_Mar2025_one, BDC_Mar2025_two, BDC_Mar2025_three, BDC_Mar2025_four,
+      BDC_Mar2025_five, BDC_Mar2025_six, BDC_Mar2025_seven, BDC_Mar2025_eight,
+      // 'https://img.freepik.com/free-vector/organic-flat-people-business-training-illustration_23-2148914456.jpg',
+      // 'https://img.freepik.com/free-vector/hand-drawn-hackathon-illustration_23-2149247796.jpg',
+      // 'https://img.freepik.com/free-vector/hand-drawn-hackathon-background_23-2149247801.jpg'
+    ],
+    registrationLink: '#',
+    speakers: [
+      // { name: 'Mr. Pranav Gujar', role: 'CEO PGT Global Network' }
+    ]
+  },
+  7: {
+    id: 7,
+    title: 'General Interest Meet(GIM) 2024',
+    date: '2024-09-25',
+    time: '03:00 PM - 05:00 PM',
+    location: 'WCE Sangli',
+    image: GIM_Poster,
+    banner: GIM_Poster,
+    // image: 'https://img.freepik.com/free-vector/organic-flat-people-business-training-illustration_23-2148914456.jpg',
+    // banner: 'https://img.freepik.com/free-vector/gradient-hackathon-banner_23-2149112554.jpg',
+    category: 'Networking',
+    description: 'An exclusive orientation and networking event designed for first-year students to explore opportunities, connect with peers, and understand the culture of the club.',
+    longDescription: ' The General Interest Meet (GIM) is a flagship orientation program held annually to welcome first-year students. It serves as the very first interaction between newcomers and the senior members of the club.\n\nThe event introduces students to the club’s vision, objectives, and the wide spectrum of activities they can engage in — ranging from technical projects, management roles, social initiatives, and leadership opportunities.\n\nGIM provides a platform for first-year students to ask questions, interact with seniors, and get inspired by alumni success stories. It emphasizes inclusivity, growth, and active participation in the club’s journey throughout the academic year',
+    highlights: [
+      'Exclusive orientation for first-year students',
+      'Introduces club structure, activities, and vision',
+      'Interactive sessions with seniors and alumni',
+      'Guidance on career development and opportunities',
+      'Encourages networking and team-building among freshers',
+      'Inspires active participation in club initiatives'
+    ],
+    gallery: [
+      GIM_one, GIM_two, GIM_three, GIM_four, GIM_five, GIM_six,
+      // 'https://img.freepik.com/free-vector/organic-flat-people-business-training-illustration_23-2148914456.jpg',
+      // 'https://img.freepik.com/free-vector/hand-drawn-hackathon-illustration_23-2149247796.jpg',
+      // 'https://img.freepik.com/free-vector/hand-drawn-hackathon-background_23-2149247801.jpg'
+    ],
+    registrationLink: '#',
+    speakers: [
+      // { name: 'Mr. Pranav Gujar', role: 'CEO PGT Global Network' }
+    ]
+  },
+  8: {
+    id: 8,
+    title: 'Corporate Social Responsibility (CSR) 2025',
+    date: '2025-02-20',
+    time: '03:00 PM - 05:00 PM',
+    location: 'WCE Sangli',
+    image: CSR_Poster,
+    banner: CSR_Poster,
+    // image: 'https://img.freepik.com/free-vector/organic-flat-people-business-training-illustration_23-2148914456.jpg',
+    // banner: 'https://img.freepik.com/free-vector/gradient-hackathon-banner_23-2149112554.jpg',
+    category: 'Social',
+    description: 'A social initiative where members engage with communities through awareness drives, cleanliness campaigns, and social outreach programs.',
+    longDescription: 'The Corporate Social Responsibility (CSR) Drive represents our commitment to giving back to society through impactful initiatives. These drives often include activities such as cleanliness campaigns, health and hygiene awareness sessions, and support for underprivileged communities.\n\nMembers actively collaborate with NGOs, local organizations, and volunteers to address real-world social issues. Beyond service, the CSR drive fosters empathy, leadership, and a deep sense of responsibility among students, aligning with the vision of holistic development.\n\nThe program not only benefits the community but also provides members with invaluable exposure to the challenges of social work and the importance of collective action.',
+    highlights: [
+       'Community outreach through awareness and service',
+      'Collaboration with NGOs and local organizations',
+      'Encourages student leadership in social initiatives',
+      'Focus on health, hygiene, and sustainability',
+      'Promotes teamwork, empathy, and social responsibility'
+    ],
+    gallery: [
+      CSR_one, CSR_two, CSR_three, CSR_four, CSR_five,
+      // 'https://img.freepik.com/free-vector/organic-flat-people-business-training-illustration_23-2148914456.jpg',
+      // 'https://img.freepik.com/free-vector/hand-drawn-hackathon-illustration_23-2149247796.jpg',
+      // 'https://img.freepik.com/free-vector/hand-drawn-hackathon-background_23-2149247801.jpg'
+    ],
+    registrationLink: '#',
+    speakers: [
+      // { name: 'Mr. Pranav Gujar', role: 'CEO PGT Global Network' }
     ]
   },
   

@@ -4,51 +4,95 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer.jsx';
 
+import PDM_Poster from '../assets/Events_IMG/PDM/poster.jpg';
+import GBM_Poster from '../assets/Events_IMG/GBM/poster.jpg';
+import GM_Poster from '../assets/Events_IMG/GM/poster.jpeg';
+import GIM_Poster from '../assets/Events_IMG/GIM/poster.jpeg';
+import SP_Poster from '../assets/Events_IMG/SP/poster.jpg';
+import CSR_Poster from '../assets/Events_IMG/CSR/poster.jpg';
+import BDC_March_2025_Poster from '../assets/Events_IMG/BDC/March 2025/poster.webp';
+import BDC_October_2024_Poster from '../assets/Events_IMG/BDC/October 2024/poster.jpeg';
+
 // Sample events data (replace with actual data from your backend)
 const events = [
   {
     id: 1,
     title: 'Professional Development Meets (PDMs)',
-    date: '2023-11-15',
-    location: 'Tilak Hall',
-    image: 'https://img.freepik.com/free-vector/people-analyzing-growth-charts_23-2148866842.jpg',
+    date: '2025-04-15',
+    location: 'WCE Sangli',
+    image: PDM_Poster,
+    // image: 'https://img.freepik.com/free-vector/people-analyzing-growth-charts_23-2148866842.jpg',
     description: 'Sessions conducted to enhance members’ skills through workshops, expert talks, and interactive learning.',
     category: 'Conference'
   },
   {
     id: 2,
     title: 'Street Play',
-    date: '2023-12-05',
+    date: '2025-03-29',
     location: 'Campus Courtyard',
-    image: 'https://img.freepik.com/free-vector/organic-flat-people-business-training-illustration_23-2148914456.jpg',
+    image:SP_Poster,
+    // image: 'https://img.freepik.com/free-vector/organic-flat-people-business-training-illustration_23-2148914456.jpg',
     description: 'A creative event where participants use drama and performance to spread social awareness on pressing issues in an engaging and impactful way.',
     category: 'Social'
   },
   {
     id: 3,
     title: 'General Body Meets (GBMs)',
-    date: '2024-01-10',
-    location: 'Main Seminar Hall',
-    image: 'https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg',
+    date: '2024-01-21',
+    location: 'WCE Sangli',
+    image: GBM_Poster,
+    // image: 'https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg',
     description: 'Regular gatherings of all members to share updates, review activities, and plan upcoming projects.',
     category: 'Workshop'
   },
   {
     id: 4,
     title: 'Global Mandate',
-    date: '2024-02-20',
-    location: 'Tilak Hall, Classrooms, Seminar Halls',
-    image: 'https://img.freepik.com/free-vector/college-students-concept-illustration_114360-1244.jpg',
+    date: '2023-10-07',
+    location: 'WCE Sangli',
+    image: GM_Poster,
+    // image: 'https://img.freepik.com/free-vector/college-students-concept-illustration_114360-1244.jpg',
     description: 'A platform where participants discuss and simulate global issues, policies, and solutions through debate, presentations, and strategy-making.',
     category: 'Networking'
   },
   {
     id: 5,
-    title: 'Blood Donation Camps',
-    date: '2025-02-20',
-    location: 'Community Hall',
-    image: 'https://img.freepik.com/free-vector/college-students-concept-illustration_114360-1244.jpg',
+    title: 'Blood Donation Camp 2024',
+    date: '2024-10-22',
+    location: 'WCE Sangli',
+    image: BDC_October_2024_Poster,
+    // image: 'https://img.freepik.com/free-vector/college-students-concept-illustration_114360-1244.jpg',
     description: 'A flagship community service initiative where members organize donation drives to support hospitals and blood banks.',
+    category: 'Social'
+  },
+  {
+    id: 6,
+    title: 'Blood Donation Camp 2025',
+    date: '2025-04-04',
+    location: 'WCE Sangli',
+    image: BDC_March_2025_Poster,
+    // image: 'https://img.freepik.com/free-vector/college-students-concept-illustration_114360-1244.jpg',
+    description: 'A flagship community service initiative where members organize donation drives to support hospitals and blood banks.',
+    category: 'Social'
+  },
+  {
+    id: 7,
+    title: 'General Interest Meet(GIM) 2024',
+    date: '2024-09-25',
+    location: 'WCE Sangli',
+    image:GIM_Poster,
+    // image: 'https://img.freepik.com/free-vector/college-students-concept-illustration_114360-1244.jpg',
+    description: 'An exclusive orientation and networking event designed for first-year students to explore opportunities, connect with peers, and understand the culture of the club.',
+    category: 'Networking'
+  },
+  {
+    id: 8,
+    title: 'Corporate Social Responsibility (CSR) 2025',
+    date: '2025-02-20',
+    location: 'Apang Seva Kendra',
+    image: CSR_Poster,
+    // image: 'https://img.freepik.com/free-vector/college-students-concept-illustration_114360-1244.jpg',
+    description: 'A social initiative where members engage with communities through awareness drives, cleanliness campaigns, and social outreach programs.',
     category: 'Social'
   },
 ];

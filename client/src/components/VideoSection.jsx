@@ -7,58 +7,66 @@ const VideoSection = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Auto-play and loop the video
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
-    // Log video source for debugging
-    console.log('Video source:', video.querySelector('source')?.src);
-    
-    // Set video to loop and mute
     video.loop = true;
-    video.muted = true;
+    video.muted = false; // we want sound
     video.playsInline = true;
-    
-    // Try to play the video
-    const playVideo = async () => {
+
+    const playWithSound = async () => {
       try {
+        video.muted = false;
         await video.play();
-        console.log('Video is playing');
+        console.log("Video playing with sound");
       } catch (err) {
-        console.error('Error playing video:', err);
-        setError('Error loading video. Please ensure the video file exists at /public/videos/video.mp4');
+        console.error("Autoplay with sound blocked:", err);
       }
     };
 
-    // Handle when video is loaded
-    const handleLoaded = () => {
-      console.log('Video metadata loaded');
-      setIsLoading(false);
-      playVideo();
+    const pauseVideo = () => {
+      video.pause();
+      console.log("Video paused");
     };
 
-    // Handle errors
-    const handleError = (e) => {
-      console.error('Video error:', e);
-      setError('Error loading video. Please check the console for details.');
-    };
+    // IntersectionObserver → play only if visible
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            playWithSound();
+          } else {
+            pauseVideo();
+          }
+        });
+      },
+      { threshold: 0.5 } // at least 50% visible
+    );
+    observer.observe(video);
 
-    // Add event listeners
-    video.addEventListener('loadedmetadata', handleLoaded);
-    video.addEventListener('error', handleError);
-    
-    // Initial play attempt
-    playVideo();
-    
+    // Handle tab switching
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        pauseVideo();
+      } else {
+        // check if still visible before resuming
+        const rect = video.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          playWithSound();
+        }
+      }
+    };
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
     // Cleanup
     return () => {
-      video.removeEventListener('loadedmetadata', handleLoaded);
-      video.removeEventListener('error', handleError);
+      observer.disconnect();
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
   }, []);
 
-  // Loading animation component
+  // Loading animation
   const LoadingSpinner = () => (
     <motion.div 
       className="absolute inset-0 flex items-center justify-center bg-black/90 z-10"
@@ -84,7 +92,7 @@ const VideoSection = () => {
       <AnimatePresence>
         {isLoading && !error && <LoadingSpinner />}
       </AnimatePresence>
-      
+
       {error ? (
         <div className="w-full h-full flex items-center justify-center text-red-400 p-8 text-center">
           <div>
@@ -102,13 +110,15 @@ const VideoSection = () => {
             className="w-full h-full object-cover opacity-90"
             playsInline
             autoPlay
-            muted
             loop
             preload="auto"
+            controls
             onError={(e) => {
               console.error('Video error event:', e);
               setError('Failed to load video. Check console for details.');
             }}
+            onLoadStart={() => setIsLoading(true)}
+            onLoadedData={() => setIsLoading(false)}
           >
             <source 
               src="/videos/video.mp4" 
@@ -118,15 +128,13 @@ const VideoSection = () => {
                 setIsLoading(false);
                 setError('Video source not found. Check the file path.');
               }}
-              onLoadStart={() => setIsLoading(true)}
-              onLoadedData={() => setIsLoading(false)}
             />
             Your browser does not support the video tag.
           </video>
         </>
       )}
 
-      {/* Overlay for better text visibility */}
+      {/* Overlay for text */}
       <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
         <motion.div 
           className="text-center px-4 max-w-4xl mx-auto"
