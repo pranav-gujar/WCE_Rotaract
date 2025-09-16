@@ -8,7 +8,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer.jsx';
 import { FaUsers, FaHandsHelping, FaGlobe, FaLaptopCode, FaRocket, FaLightbulb, FaUsersCog } from 'react-icons/fa';
 
-const text = `Established on February 23, 1975, the Rotaract Club of WCE Sangli is among the oldest and most dynamic clubs of the college, proudly celebrating its 50th charter year. Guided by the spirit of “Service Above Self” and our motto “In Learning Is Our Precept,” we bring together passionate individuals dedicated to community service, personal growth, and leadership development. Through diverse projects and creative initiatives, our members strive to make a meaningful impact on society while nurturing themselves into the leaders of tomorrow.`;
+const text = `Established on February 23, 1975, the Rotaract Club of WCE Sangli is among the oldest and most dynamic clubs of the college, proudly celebrating its 50th charter year. Guided by the spirit of “Service Above Self” and our motto “Learning Is Our Precept,” we bring together passionate individuals dedicated to community service, personal growth, and leadership development. Through diverse projects and creative initiatives, our members strive to make a meaningful impact on society while nurturing themselves into the leaders of tomorrow.`;
 const words = text.split(' ');
 
 const TiltCard = ({ children, className = '' }) => {
