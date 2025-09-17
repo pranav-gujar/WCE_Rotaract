@@ -5,8 +5,11 @@ import Footer from '../components/Footer.jsx';
 import VideoSection from '../components/VideoSection';
 import CustomCursor from '../components/CustomCursor';
 import { FiArrowRight, FiChevronDown, FiPlay, FiPause } from 'react-icons/fi';
-import PGTLogo from '../assets/images/PGT.png';
-import WCElogo from '../assets/images/WCE.png';
+// import ClubLogo from '../assets/images/Logo.png';
+// import WCElogo from '../assets/images/WCE.png';
+import RTR50 from '../assets/images/RTR50.png';
+import RTRLogo from '../assets/images/RTRLogo.png';
+
 
 const Coin = ({ logo, alt, className, delay }) => {
   return (
@@ -95,17 +98,17 @@ export default function Landing() {
         {/* Fixed Position Coins Container */}
         <div className="absolute top-0 left-0 w-full h-screen pointer-events-none z-20">
           <div className="relative w-full h-full">
-            {/* WCE Coin */}
+            {/* RTR Logo Coin */}
             <Coin 
-              logo={WCElogo}
+              logo={RTRLogo}
               alt="WCE Logo"
               className="left-2 sm:left-4 md:left-0 top-20 w-24 h-24 sm:w-36 sm:h-36 md:w-48 md:h-48"
               delay={0}
             />
 
-            {/* PGT Coin */}
+            {/* RTR 50 Years Coin */}
             <Coin 
-              logo={PGTLogo}
+              logo={RTR50}
               alt="PGT Logo"
               className="right-2 sm:right-4 md:right-0 top-20 w-24 h-24 sm:w-36 sm:h-36 md:w-48 md:h-48"
               delay={1}
