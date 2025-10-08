@@ -87,7 +87,7 @@ const teamMembers = [
   },
   {
     id: 7,
-    name: 'Madhura Kaikade',
+    name: 'Madhura Kaikadi',
     position: 'Club Service Director',
     image: madhuraImg,
     social: {
@@ -378,7 +378,7 @@ const Team = () => {
                       <div className="p-8 md:p-10">
                         <div className="flex items-center mb-6">
                           <div className="h-1 w-10 bg-yellow-500 mr-3" />
-                          <span className="text-sm font-medium text-yellow-400 tracking-wider">ROTARACT WCE</span>
+                          <span className="text-sm font-medium text-yellow-400 tracking-wider">Rotaractor</span>
                         </div>
                         
                         <h2 className="text-3xl font-bold text-white mb-2">{selectedMember.name}</h2>
